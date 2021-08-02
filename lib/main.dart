@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:etha/pages/home.dart';
 import 'package:etha/pages/landingpage.dart';
+import 'package:etha/widgets/gnav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Khojo'),
+      home: MyHomePage(title: 'Etha'),
     );
   }
 }
@@ -36,11 +38,11 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 10),
+      Duration(seconds: 3),
       () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => LandingPage(),
+          builder: (context) => Gnav(),
         ),
       ),
     );
@@ -55,13 +57,13 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Image.asset(
               'images/logoa.png',
-              height: 150,
+              height: 250,
             ),
             SizedBox(
               height: 30,
             ),
-            SpinKitFadingCube(
-              color: Colors.black,
+            SpinKitDoubleBounce(
+              color: Colors.pinkAccent,
             ),
           ],
         ),

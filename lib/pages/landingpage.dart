@@ -19,7 +19,7 @@ class _LandingPageState extends State<LandingPage> {
         title: Row(
           children: [
             Image.asset(
-              'images/logoa.png',
+              'images/logoc.png',
               height: 70,
             ),
           ],
@@ -30,7 +30,10 @@ class _LandingPageState extends State<LandingPage> {
             tooltip: 'Show Snackbar',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a snackbar')));
+                const SnackBar(
+                  content: Text('This is a snackbar'),
+                ),
+              );
             },
           ),
           IconButton(
@@ -66,19 +69,16 @@ class _LandingPageState extends State<LandingPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                height: 20,
-              ),
               Container(
                 width: double.infinity,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "images/bga.png",
-                    ),
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                // decoration: BoxDecoration(
+                //   image: DecorationImage(
+                //     image: AssetImage(
+                //       "images/ba.png",
+                //     ),
+                //     fit: BoxFit.cover,
+                //   ),
+                // ),
                 child: Image.asset(
                   'images/ba.png',
                   width: 450,
@@ -343,7 +343,7 @@ class _LandingPageState extends State<LandingPage> {
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     'Submit',
-                    style: TextStyle(fontSize: 30),
+                    style: TextStyle(fontSize: 30, color: Colors.black),
                   ),
                 ),
               ),
